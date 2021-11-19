@@ -31,7 +31,7 @@ const Header = () => {
       <header className={styles.header}>
         <Link href="/">
           <div className={styles.logo_wrapper}>
-            <img src="\Frame 1.png" />
+            <img src="\Frame 1.png" alt="shop" />
           </div>
         </Link>
         <div className={styles.header_buttons_wrapper}>
