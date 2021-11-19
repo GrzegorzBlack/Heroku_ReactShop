@@ -4,6 +4,8 @@ import UserButton from "./Buttons/LoginButton";
 import AdminButton from "./Buttons/AdminButton";
 import UserLoggedButton from "./Buttons/UserButon";
 import Link from "next/link";
+import Image from "next/image";
+import frame from "../public/Frame 1.png";
 
 import { useAdmin } from "../contexts/AdminProvider";
 import { useUser } from "../contexts/UserProvider";
@@ -29,9 +31,9 @@ const Header = () => {
   return (
     <nav className={styles.navbar}>
       <header className={styles.header}>
-        <Link href="/">
+        <Link href="/" passHref>
           <div className={styles.logo_wrapper}>
-            <img src="\Frame 1.png" alt="shop" />
+            <Image src={frame} alt="shop" width={253} height={102} />
           </div>
         </Link>
         <div className={styles.header_buttons_wrapper}>
