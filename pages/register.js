@@ -14,17 +14,17 @@ const Register = () => {
   const [showModal, setShowModal] = useState(false);
   const [PasswordInputType, ToggleIcon] = usePasswordToggle();
 
-  let item;
+  // let item;
 
-  if (typeof window !== "undefined") {
-    if (typeof window.localStorage.getItem("user") == "null") {
-      item = 0;
-    } else {
-      item = 0;
-    }
-  } else if (typeof window == "null") {
-    item = 0;
-  }
+  // if (typeof window !== "undefined") {
+  //   if (typeof window.localStorage.getItem("user") == "null") {
+  //     item = 0;
+  //   } else {
+  //     item = 0;
+  //   }
+  // } else if (typeof window == "null") {
+  //   item = 0;
+  // }
 
   const change = () => {
     setShowModal(true);
