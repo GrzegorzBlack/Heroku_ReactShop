@@ -19,17 +19,17 @@ export default function Home() {
         <div className={styles.options_wrapper}>
           <div>
             <p>Log in if you already have an account</p>
-            <Link href="/login">
+            <Link href="/login" passHref>
               <button>Click</button>
             </Link>
             <p>If not click to Register</p>
-            <Link href="/register">
+            <Link href="/register" passHref>
               <button>Register</button>
             </Link>
           </div>
           <div>
             <p>Buy without logging </p>
-            <Link href="/snacks">
+            <Link href="/snacks" passHref>
               <button>Click</button>
             </Link>
           </div>
