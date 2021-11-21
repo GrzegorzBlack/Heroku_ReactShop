@@ -1,8 +1,14 @@
 import { AdminProduct } from "../components/AdminProduct";
 import { useProducts } from "../contexts/ProductsProvider";
 import { Form } from "../components/Form";
-import Popup from "../components/Modals/AdminPopup";
+// import Popup from "../components/Modals/AdminPopup";
 import { useState } from "react";
+
+import dynamic from "next/dynamic";
+
+const Popup = dynamic(() => import("../components/Modals/AdminPopup"), {
+  ssr: false,
+});
 
 import styles from "../styles/Home.module.css";
 
@@ -26,7 +32,7 @@ const Admin = () => {
         {...product}
       />
     ));
-    console.log(renderedProducts);
+    // console.log(renderedProducts);
     return (
       <div className={styles.admin_products_wrapper}>
         <div className={styles.snacksPage_wrapper}>

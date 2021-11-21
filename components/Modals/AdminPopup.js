@@ -1,9 +1,13 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import ReactDOM from "react-dom";
 import styles from "../../styles/Home.module.css";
 
 const Popup = ({ show, onClose, children }) => {
   const [isBrowser, setIsBrowser] = useState(true);
+
+  useEffect(() => {
+    setIsBrowser(true);
+  }, []);
 
   const handleCloseClick = (e) => {
     e.preventDefault();
