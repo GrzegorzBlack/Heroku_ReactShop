@@ -27,13 +27,16 @@ export const LoginUser = () => {
     },
 
     onSubmit: (values) => {
-      const item = JSON.parse(window.localStorage.getItem("user"));
+      console.log("Weszło do onSubmit");
 
       const { userNameInput } = values;
       const { password } = values;
 
-      const userLogged = item.find((user) => user.userName == userNameInput);
-
+      const item = JSON.parse(window.localStorage.getItem("user"));
+      let userLogged;
+      if (item !== null) {
+        userLogged = item.find((user) => user.userName == userNameInput);
+      }
       if (userLogged) {
         const { userName } = userLogged;
         const payload = {
